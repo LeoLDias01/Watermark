@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.tmrHorario = new System.Windows.Forms.Timer(this.components);
+            this.flpTexto = new System.Windows.Forms.FlowLayoutPanel();
             this.tlpLabels = new System.Windows.Forms.TableLayoutPanel();
             this.lblPnl21 = new System.Windows.Forms.Panel();
             this.lblNomeHostPnl31 = new System.Windows.Forms.Label();
@@ -75,13 +77,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tmrHorario = new System.Windows.Forms.Timer(this.components);
-            this.flpTexto = new System.Windows.Forms.FlowLayoutPanel();
             this.tlpLabels.SuspendLayout();
             this.lblPnl21.SuspendLayout();
             this.lblPnl12.SuspendLayout();
             this.lblPnl11.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tmrHorario
+            // 
+            this.tmrHorario.Interval = 4000;
+            this.tmrHorario.Tick += new System.EventHandler(this.tmrHorario_Tick);
+            // 
+            // flpTexto
+            // 
+            this.flpTexto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpTexto.Location = new System.Drawing.Point(0, 0);
+            this.flpTexto.Name = "flpTexto";
+            this.flpTexto.Size = new System.Drawing.Size(120, 23);
+            this.flpTexto.TabIndex = 17;
             // 
             // tlpLabels
             // 
@@ -92,13 +105,13 @@
             this.tlpLabels.Controls.Add(this.lblPnl21, 2, 0);
             this.tlpLabels.Controls.Add(this.lblPnl12, 1, 0);
             this.tlpLabels.Controls.Add(this.lblPnl11, 0, 0);
-            this.tlpLabels.Location = new System.Drawing.Point(490, 316);
+            this.tlpLabels.Location = new System.Drawing.Point(10, 21);
             this.tlpLabels.Name = "tlpLabels";
             this.tlpLabels.RowCount = 1;
             this.tlpLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpLabels.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tlpLabels.Size = new System.Drawing.Size(244, 171);
-            this.tlpLabels.TabIndex = 2;
+            this.tlpLabels.Size = new System.Drawing.Size(56, 19);
+            this.tlpLabels.TabIndex = 18;
             this.tlpLabels.Visible = false;
             // 
             // lblPnl21
@@ -118,20 +131,19 @@
             this.lblPnl21.Controls.Add(this.label41);
             this.lblPnl21.Controls.Add(this.label42);
             this.lblPnl21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPnl21.Location = new System.Drawing.Point(1, 3);
+            this.lblPnl21.Location = new System.Drawing.Point(-187, 3);
             this.lblPnl21.Name = "lblPnl21";
-            this.lblPnl21.Size = new System.Drawing.Size(241, 165);
+            this.lblPnl21.Size = new System.Drawing.Size(241, 13);
             this.lblPnl21.TabIndex = 4;
             // 
             // lblNomeHostPnl31
             // 
             this.lblNomeHostPnl31.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblNomeHostPnl31.AutoSize = true;
-            this.lblNomeHostPnl31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeHostPnl31.ForeColor = System.Drawing.Color.Black;
-            this.lblNomeHostPnl31.Location = new System.Drawing.Point(180, 151);
+            this.lblNomeHostPnl31.Location = new System.Drawing.Point(180, 75);
             this.lblNomeHostPnl31.Name = "lblNomeHostPnl31";
-            this.lblNomeHostPnl31.Size = new System.Drawing.Size(17, 17);
+            this.lblNomeHostPnl31.Size = new System.Drawing.Size(16, 13);
             this.lblNomeHostPnl31.TabIndex = 13;
             this.lblNomeHostPnl31.Text = "...";
             // 
@@ -139,11 +151,10 @@
             // 
             this.lblIpPnl31.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblIpPnl31.AutoSize = true;
-            this.lblIpPnl31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIpPnl31.ForeColor = System.Drawing.Color.Black;
-            this.lblIpPnl31.Location = new System.Drawing.Point(180, 125);
+            this.lblIpPnl31.Location = new System.Drawing.Point(180, 49);
             this.lblIpPnl31.Name = "lblIpPnl31";
-            this.lblIpPnl31.Size = new System.Drawing.Size(17, 17);
+            this.lblIpPnl31.Size = new System.Drawing.Size(16, 13);
             this.lblIpPnl31.TabIndex = 12;
             this.lblIpPnl31.Text = "...";
             // 
@@ -151,11 +162,10 @@
             // 
             this.lblDataInicializacaoPnl31.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDataInicializacaoPnl31.AutoSize = true;
-            this.lblDataInicializacaoPnl31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataInicializacaoPnl31.ForeColor = System.Drawing.Color.Black;
-            this.lblDataInicializacaoPnl31.Location = new System.Drawing.Point(180, 99);
+            this.lblDataInicializacaoPnl31.Location = new System.Drawing.Point(180, 23);
             this.lblDataInicializacaoPnl31.Name = "lblDataInicializacaoPnl31";
-            this.lblDataInicializacaoPnl31.Size = new System.Drawing.Size(17, 17);
+            this.lblDataInicializacaoPnl31.Size = new System.Drawing.Size(16, 13);
             this.lblDataInicializacaoPnl31.TabIndex = 11;
             this.lblDataInicializacaoPnl31.Text = "...";
             // 
@@ -163,11 +173,10 @@
             // 
             this.lblEmpresaPnl31.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblEmpresaPnl31.AutoSize = true;
-            this.lblEmpresaPnl31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmpresaPnl31.ForeColor = System.Drawing.Color.Black;
-            this.lblEmpresaPnl31.Location = new System.Drawing.Point(180, 73);
+            this.lblEmpresaPnl31.Location = new System.Drawing.Point(180, -3);
             this.lblEmpresaPnl31.Name = "lblEmpresaPnl31";
-            this.lblEmpresaPnl31.Size = new System.Drawing.Size(17, 17);
+            this.lblEmpresaPnl31.Size = new System.Drawing.Size(16, 13);
             this.lblEmpresaPnl31.TabIndex = 10;
             this.lblEmpresaPnl31.Text = "...";
             // 
@@ -175,11 +184,10 @@
             // 
             this.lblDominioPnl31.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDominioPnl31.AutoSize = true;
-            this.lblDominioPnl31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDominioPnl31.ForeColor = System.Drawing.Color.Black;
-            this.lblDominioPnl31.Location = new System.Drawing.Point(180, 47);
+            this.lblDominioPnl31.Location = new System.Drawing.Point(180, -29);
             this.lblDominioPnl31.Name = "lblDominioPnl31";
-            this.lblDominioPnl31.Size = new System.Drawing.Size(17, 17);
+            this.lblDominioPnl31.Size = new System.Drawing.Size(16, 13);
             this.lblDominioPnl31.TabIndex = 9;
             this.lblDominioPnl31.Text = "...";
             // 
@@ -187,11 +195,10 @@
             // 
             this.lblAgentePnl31.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblAgentePnl31.AutoSize = true;
-            this.lblAgentePnl31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgentePnl31.ForeColor = System.Drawing.Color.Black;
-            this.lblAgentePnl31.Location = new System.Drawing.Point(180, 21);
+            this.lblAgentePnl31.Location = new System.Drawing.Point(180, -55);
             this.lblAgentePnl31.Name = "lblAgentePnl31";
-            this.lblAgentePnl31.Size = new System.Drawing.Size(17, 17);
+            this.lblAgentePnl31.Size = new System.Drawing.Size(16, 13);
             this.lblAgentePnl31.TabIndex = 8;
             this.lblAgentePnl31.Text = "...";
             // 
@@ -199,11 +206,10 @@
             // 
             this.lblLoginPnl31.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblLoginPnl31.AutoSize = true;
-            this.lblLoginPnl31.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginPnl31.ForeColor = System.Drawing.Color.Black;
-            this.lblLoginPnl31.Location = new System.Drawing.Point(180, -5);
+            this.lblLoginPnl31.Location = new System.Drawing.Point(180, -81);
             this.lblLoginPnl31.Name = "lblLoginPnl31";
-            this.lblLoginPnl31.Size = new System.Drawing.Size(17, 17);
+            this.lblLoginPnl31.Size = new System.Drawing.Size(16, 13);
             this.lblLoginPnl31.TabIndex = 7;
             this.lblLoginPnl31.Text = "...";
             // 
@@ -211,11 +217,11 @@
             // 
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F);
             this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(10, 151);
+            this.label36.Location = new System.Drawing.Point(10, 75);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(96, 17);
+            this.label36.Size = new System.Drawing.Size(98, 19);
             this.label36.TabIndex = 6;
             this.label36.Text = "Nome do host";
             // 
@@ -223,11 +229,11 @@
             // 
             this.label37.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F);
             this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Location = new System.Drawing.Point(10, 125);
+            this.label37.Location = new System.Drawing.Point(10, 49);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(27, 17);
+            this.label37.Size = new System.Drawing.Size(28, 19);
             this.label37.TabIndex = 5;
             this.label37.Text = "IP: ";
             // 
@@ -235,11 +241,11 @@
             // 
             this.label38.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F);
             this.label38.ForeColor = System.Drawing.Color.Black;
-            this.label38.Location = new System.Drawing.Point(10, 99);
+            this.label38.Location = new System.Drawing.Point(10, 23);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(114, 17);
+            this.label38.Size = new System.Drawing.Size(123, 19);
             this.label38.TabIndex = 4;
             this.label38.Text = "Data Inicialização:";
             // 
@@ -247,11 +253,11 @@
             // 
             this.label39.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F);
             this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Location = new System.Drawing.Point(10, 73);
+            this.label39.Location = new System.Drawing.Point(10, -3);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(63, 17);
+            this.label39.Size = new System.Drawing.Size(64, 19);
             this.label39.TabIndex = 3;
             this.label39.Text = "Empresa:";
             // 
@@ -259,11 +265,11 @@
             // 
             this.label40.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F);
             this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(10, 47);
+            this.label40.Location = new System.Drawing.Point(10, -29);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(62, 17);
+            this.label40.Size = new System.Drawing.Size(66, 19);
             this.label40.TabIndex = 2;
             this.label40.Text = "Dominio:";
             // 
@@ -271,11 +277,11 @@
             // 
             this.label41.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F);
             this.label41.ForeColor = System.Drawing.Color.Black;
-            this.label41.Location = new System.Drawing.Point(10, 21);
+            this.label41.Location = new System.Drawing.Point(10, -55);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(55, 17);
+            this.label41.Size = new System.Drawing.Size(56, 19);
             this.label41.TabIndex = 1;
             this.label41.Text = "Agente:";
             // 
@@ -283,11 +289,11 @@
             // 
             this.label42.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.label42.Font = new System.Drawing.Font("Segoe UI Semibold", 10.25F);
             this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(10, -5);
+            this.label42.Location = new System.Drawing.Point(10, -81);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(51, 20);
+            this.label42.Size = new System.Drawing.Size(47, 19);
             this.label42.TabIndex = 0;
             this.label42.Text = "Login:";
             // 
@@ -308,9 +314,9 @@
             this.lblPnl12.Controls.Add(this.label27);
             this.lblPnl12.Controls.Add(this.label28);
             this.lblPnl12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPnl12.Location = new System.Drawing.Point(2, 3);
+            this.lblPnl12.Location = new System.Drawing.Point(-92, 3);
             this.lblPnl12.Name = "lblPnl12";
-            this.lblPnl12.Size = new System.Drawing.Size(1, 165);
+            this.lblPnl12.Size = new System.Drawing.Size(1, 13);
             this.lblPnl12.TabIndex = 1;
             // 
             // lblNomeHostPnl12
@@ -318,7 +324,7 @@
             this.lblNomeHostPnl12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblNomeHostPnl12.AutoSize = true;
             this.lblNomeHostPnl12.ForeColor = System.Drawing.Color.Black;
-            this.lblNomeHostPnl12.Location = new System.Drawing.Point(180, 151);
+            this.lblNomeHostPnl12.Location = new System.Drawing.Point(180, 75);
             this.lblNomeHostPnl12.Name = "lblNomeHostPnl12";
             this.lblNomeHostPnl12.Size = new System.Drawing.Size(16, 13);
             this.lblNomeHostPnl12.TabIndex = 13;
@@ -329,7 +335,7 @@
             this.lblIpPnl12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblIpPnl12.AutoSize = true;
             this.lblIpPnl12.ForeColor = System.Drawing.Color.Black;
-            this.lblIpPnl12.Location = new System.Drawing.Point(180, 125);
+            this.lblIpPnl12.Location = new System.Drawing.Point(180, 49);
             this.lblIpPnl12.Name = "lblIpPnl12";
             this.lblIpPnl12.Size = new System.Drawing.Size(16, 13);
             this.lblIpPnl12.TabIndex = 12;
@@ -340,7 +346,7 @@
             this.lblDataInicializacaoPnl12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDataInicializacaoPnl12.AutoSize = true;
             this.lblDataInicializacaoPnl12.ForeColor = System.Drawing.Color.Black;
-            this.lblDataInicializacaoPnl12.Location = new System.Drawing.Point(180, 99);
+            this.lblDataInicializacaoPnl12.Location = new System.Drawing.Point(180, 23);
             this.lblDataInicializacaoPnl12.Name = "lblDataInicializacaoPnl12";
             this.lblDataInicializacaoPnl12.Size = new System.Drawing.Size(16, 13);
             this.lblDataInicializacaoPnl12.TabIndex = 11;
@@ -351,7 +357,7 @@
             this.lblEmpresaPnl12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblEmpresaPnl12.AutoSize = true;
             this.lblEmpresaPnl12.ForeColor = System.Drawing.Color.Black;
-            this.lblEmpresaPnl12.Location = new System.Drawing.Point(180, 73);
+            this.lblEmpresaPnl12.Location = new System.Drawing.Point(180, -3);
             this.lblEmpresaPnl12.Name = "lblEmpresaPnl12";
             this.lblEmpresaPnl12.Size = new System.Drawing.Size(16, 13);
             this.lblEmpresaPnl12.TabIndex = 10;
@@ -362,7 +368,7 @@
             this.lblDominioPnl12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDominioPnl12.AutoSize = true;
             this.lblDominioPnl12.ForeColor = System.Drawing.Color.Black;
-            this.lblDominioPnl12.Location = new System.Drawing.Point(180, 47);
+            this.lblDominioPnl12.Location = new System.Drawing.Point(180, -29);
             this.lblDominioPnl12.Name = "lblDominioPnl12";
             this.lblDominioPnl12.Size = new System.Drawing.Size(16, 13);
             this.lblDominioPnl12.TabIndex = 9;
@@ -373,7 +379,7 @@
             this.lblAgentePnl12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblAgentePnl12.AutoSize = true;
             this.lblAgentePnl12.ForeColor = System.Drawing.Color.Black;
-            this.lblAgentePnl12.Location = new System.Drawing.Point(180, 21);
+            this.lblAgentePnl12.Location = new System.Drawing.Point(180, -55);
             this.lblAgentePnl12.Name = "lblAgentePnl12";
             this.lblAgentePnl12.Size = new System.Drawing.Size(16, 13);
             this.lblAgentePnl12.TabIndex = 8;
@@ -384,7 +390,7 @@
             this.lblLoginPnl12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblLoginPnl12.AutoSize = true;
             this.lblLoginPnl12.ForeColor = System.Drawing.Color.Black;
-            this.lblLoginPnl12.Location = new System.Drawing.Point(180, -5);
+            this.lblLoginPnl12.Location = new System.Drawing.Point(180, -81);
             this.lblLoginPnl12.Name = "lblLoginPnl12";
             this.lblLoginPnl12.Size = new System.Drawing.Size(16, 13);
             this.lblLoginPnl12.TabIndex = 7;
@@ -395,7 +401,7 @@
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label22.AutoSize = true;
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(10, 151);
+            this.label22.Location = new System.Drawing.Point(10, 75);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(73, 13);
             this.label22.TabIndex = 6;
@@ -405,7 +411,7 @@
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(10, 125);
+            this.label23.Location = new System.Drawing.Point(10, 49);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(23, 13);
             this.label23.TabIndex = 5;
@@ -416,7 +422,7 @@
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(10, 99);
+            this.label24.Location = new System.Drawing.Point(10, 23);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(94, 13);
             this.label24.TabIndex = 4;
@@ -427,7 +433,7 @@
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(10, 73);
+            this.label25.Location = new System.Drawing.Point(10, -3);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(51, 13);
             this.label25.TabIndex = 3;
@@ -438,7 +444,7 @@
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(10, 47);
+            this.label26.Location = new System.Drawing.Point(10, -29);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(48, 13);
             this.label26.TabIndex = 2;
@@ -449,7 +455,7 @@
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.Color.Black;
-            this.label27.Location = new System.Drawing.Point(10, 21);
+            this.label27.Location = new System.Drawing.Point(10, -55);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(44, 13);
             this.label27.TabIndex = 1;
@@ -460,7 +466,7 @@
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label28.AutoSize = true;
             this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(10, -5);
+            this.label28.Location = new System.Drawing.Point(10, -81);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(36, 13);
             this.label28.TabIndex = 0;
@@ -485,7 +491,7 @@
             this.lblPnl11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblPnl11.Location = new System.Drawing.Point(3, 3);
             this.lblPnl11.Name = "lblPnl11";
-            this.lblPnl11.Size = new System.Drawing.Size(1, 165);
+            this.lblPnl11.Size = new System.Drawing.Size(1, 13);
             this.lblPnl11.TabIndex = 0;
             // 
             // lblNomeHostPnl11
@@ -493,7 +499,7 @@
             this.lblNomeHostPnl11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblNomeHostPnl11.AutoSize = true;
             this.lblNomeHostPnl11.ForeColor = System.Drawing.Color.Black;
-            this.lblNomeHostPnl11.Location = new System.Drawing.Point(180, 151);
+            this.lblNomeHostPnl11.Location = new System.Drawing.Point(180, 75);
             this.lblNomeHostPnl11.Name = "lblNomeHostPnl11";
             this.lblNomeHostPnl11.Size = new System.Drawing.Size(16, 13);
             this.lblNomeHostPnl11.TabIndex = 13;
@@ -504,7 +510,7 @@
             this.lblIpPnl11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblIpPnl11.AutoSize = true;
             this.lblIpPnl11.ForeColor = System.Drawing.Color.Black;
-            this.lblIpPnl11.Location = new System.Drawing.Point(180, 125);
+            this.lblIpPnl11.Location = new System.Drawing.Point(180, 49);
             this.lblIpPnl11.Name = "lblIpPnl11";
             this.lblIpPnl11.Size = new System.Drawing.Size(16, 13);
             this.lblIpPnl11.TabIndex = 12;
@@ -515,7 +521,7 @@
             this.lblDataInicializacaoPnl11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDataInicializacaoPnl11.AutoSize = true;
             this.lblDataInicializacaoPnl11.ForeColor = System.Drawing.Color.Black;
-            this.lblDataInicializacaoPnl11.Location = new System.Drawing.Point(180, 99);
+            this.lblDataInicializacaoPnl11.Location = new System.Drawing.Point(180, 23);
             this.lblDataInicializacaoPnl11.Name = "lblDataInicializacaoPnl11";
             this.lblDataInicializacaoPnl11.Size = new System.Drawing.Size(16, 13);
             this.lblDataInicializacaoPnl11.TabIndex = 11;
@@ -526,7 +532,7 @@
             this.lblEmpresaPnl11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblEmpresaPnl11.AutoSize = true;
             this.lblEmpresaPnl11.ForeColor = System.Drawing.Color.Black;
-            this.lblEmpresaPnl11.Location = new System.Drawing.Point(180, 73);
+            this.lblEmpresaPnl11.Location = new System.Drawing.Point(180, -3);
             this.lblEmpresaPnl11.Name = "lblEmpresaPnl11";
             this.lblEmpresaPnl11.Size = new System.Drawing.Size(16, 13);
             this.lblEmpresaPnl11.TabIndex = 10;
@@ -537,7 +543,7 @@
             this.lblDominioPnl11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDominioPnl11.AutoSize = true;
             this.lblDominioPnl11.ForeColor = System.Drawing.Color.Black;
-            this.lblDominioPnl11.Location = new System.Drawing.Point(180, 47);
+            this.lblDominioPnl11.Location = new System.Drawing.Point(180, -29);
             this.lblDominioPnl11.Name = "lblDominioPnl11";
             this.lblDominioPnl11.Size = new System.Drawing.Size(16, 13);
             this.lblDominioPnl11.TabIndex = 9;
@@ -548,7 +554,7 @@
             this.lblAgentePnl11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblAgentePnl11.AutoSize = true;
             this.lblAgentePnl11.ForeColor = System.Drawing.Color.Black;
-            this.lblAgentePnl11.Location = new System.Drawing.Point(180, 21);
+            this.lblAgentePnl11.Location = new System.Drawing.Point(180, -55);
             this.lblAgentePnl11.Name = "lblAgentePnl11";
             this.lblAgentePnl11.Size = new System.Drawing.Size(16, 13);
             this.lblAgentePnl11.TabIndex = 8;
@@ -559,7 +565,7 @@
             this.lblLoginPnl11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblLoginPnl11.AutoSize = true;
             this.lblLoginPnl11.ForeColor = System.Drawing.Color.Black;
-            this.lblLoginPnl11.Location = new System.Drawing.Point(180, -5);
+            this.lblLoginPnl11.Location = new System.Drawing.Point(180, -81);
             this.lblLoginPnl11.Name = "lblLoginPnl11";
             this.lblLoginPnl11.Size = new System.Drawing.Size(16, 13);
             this.lblLoginPnl11.TabIndex = 7;
@@ -570,7 +576,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(10, 151);
+            this.label7.Location = new System.Drawing.Point(10, 75);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 13);
             this.label7.TabIndex = 6;
@@ -581,7 +587,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(10, 125);
+            this.label6.Location = new System.Drawing.Point(10, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(23, 13);
             this.label6.TabIndex = 5;
@@ -592,7 +598,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(10, 99);
+            this.label5.Location = new System.Drawing.Point(10, 23);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 13);
             this.label5.TabIndex = 4;
@@ -603,7 +609,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(10, 73);
+            this.label4.Location = new System.Drawing.Point(10, -3);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 3;
@@ -614,7 +620,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(10, 47);
+            this.label3.Location = new System.Drawing.Point(10, -29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 2;
@@ -625,7 +631,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(10, 21);
+            this.label2.Location = new System.Drawing.Point(10, -55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
@@ -636,33 +642,20 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(10, -5);
+            this.label1.Location = new System.Drawing.Point(10, -81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login:";
-            // 
-            // tmrHorario
-            // 
-            this.tmrHorario.Interval = 4000;
-            this.tmrHorario.Tick += new System.EventHandler(this.tmrHorario_Tick);
-            // 
-            // flpTexto
-            // 
-            this.flpTexto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpTexto.Location = new System.Drawing.Point(0, 0);
-            this.flpTexto.Name = "flpTexto";
-            this.flpTexto.Size = new System.Drawing.Size(102, 28);
-            this.flpTexto.TabIndex = 17;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(102, 28);
-            this.Controls.Add(this.flpTexto);
+            this.ClientSize = new System.Drawing.Size(120, 23);
             this.Controls.Add(this.tlpLabels);
+            this.Controls.Add(this.flpTexto);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenu";
@@ -684,7 +677,8 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.Timer tmrHorario;
+        private System.Windows.Forms.FlowLayoutPanel flpTexto;
         private System.Windows.Forms.TableLayoutPanel tlpLabels;
         private System.Windows.Forms.Panel lblPnl21;
         private System.Windows.Forms.Label lblNomeHostPnl31;
@@ -731,7 +725,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer tmrHorario;
-        private System.Windows.Forms.FlowLayoutPanel flpTexto;
     }
 }

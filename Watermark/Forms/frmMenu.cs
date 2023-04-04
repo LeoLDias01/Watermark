@@ -17,24 +17,22 @@ namespace Watermark.Forms
     public partial class frmMenu : Form
     {
         #region ..:: Variables ::..
-
-        private string userName;
-        private string userFullName;
-        private string netWorkDomainName;
-        private string userDomainName;
-        private string actualDate;
-        private string localIp;
-        private string hostName;
-
+        public string userName;
+        public string userFullName;
+        public string netWorkDomainName;
+        public string userDomainName;
+        public string actualDate;
+        public string localIp;
+        public string hostName;
         #endregion
 
         #region ..:: Constraints ::..
-        private const int CONST_PASS_THROUGH_MOUSE = 0x20;
-        private const int CONST_DIVISION_SIZE = 23;
-        private const int CONST_WINDOW_WIDTH = 700;
-        private const int CONST_WINDOW_HEIGHT = 20;
-        private const int CONST_WINDOW_X_POSITION = 100;
-        private const int CONST_WINDOW_Y_POSITION = 80;
+        public const int CONST_PASS_THROUGH_MOUSE = 0x20;
+        public const int CONST_DIVISION_SIZE = 23;
+        public const int CONST_WINDOW_WIDTH = 700;
+        public const int CONST_WINDOW_HEIGHT = 20;
+        public const int CONST_WINDOW_X_POSITION = 100;
+        public const int CONST_WINDOW_Y_POSITION = 80;
         #endregion
 
         public frmMenu()
