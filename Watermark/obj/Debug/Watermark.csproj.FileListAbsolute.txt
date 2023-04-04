@@ -1,0 +1,11 @@
+C:\Users\leonardoleal.CONCILIG\source\repos\Watermark\Watermark\bin\Debug\Watermark.exe.config
+C:\Users\leonardoleal.CONCILIG\source\repos\Watermark\Watermark\bin\Debug\Watermark.exe
+C:\Users\leonardoleal.CONCILIG\source\repos\Watermark\Watermark\bin\Debug\Watermark.pdb
+C:\Users\leonardoleal.CONCILIG\source\repos\Watermark\Watermark\obj\Debug\Watermark.csproj.AssemblyReference.cache
+C:\Users\leonardoleal.CONCILIG\source\repos\Watermark\Watermark\obj\Debug\Watermark.csproj.SuggestedBindingRedirects.cache
+C:\Users\leonardoleal.CONCILIG\source\repos\Watermark\Watermark\obj\Debug\Watermark.Forms.frmMenu.resources
+C:\Users\leonardoleal.CONCILIG\source\repos\Watermark\Watermark\obj\Debug\Watermark.Properties.Resources.resources
+C:\Users\leonardoleal.CONCILIG\source\repos\Watermark\Watermark\obj\Debug\Watermark.csproj.GenerateResource.cache
+C:\Users\leonardoleal.CONCILIG\source\repos\Watermark\Watermark\obj\Debug\Watermark.csproj.CoreCompileInputs.cache
+C:\Users\leonardoleal.CONCILIG\source\repos\Watermark\Watermark\obj\Debug\Watermark.exe
+C:\Users\leonardoleal.CONCILIG\source\repos\Watermark\Watermark\obj\Debug\Watermark.pdb
