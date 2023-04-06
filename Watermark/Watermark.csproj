@@ -48,16 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\frmMenu.cs">
+    <Compile Include="Forms\frmMark.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMenu.Designer.cs">
-      <DependentUpon>frmMenu.cs</DependentUpon>
+    <Compile Include="Forms\frmMark.Designer.cs">
+      <DependentUpon>frmMark.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\frmMenu.resx">
-      <DependentUpon>frmMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmMark.resx">
+      <DependentUpon>frmMark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
